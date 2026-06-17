@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: yarn install
-      - run: yarn tinacms build --local --skip-cloud-checks && yarn next build
+      - run: yarn tinacms build --local --skip-cloud-checks -c "yarn next build"
