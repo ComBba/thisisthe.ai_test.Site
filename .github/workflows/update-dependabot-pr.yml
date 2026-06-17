@@ -4,6 +4,9 @@ on:
     branches:
       - dependabot/npm_and_yarn/**
 
+permissions:
+  contents: write
+
 jobs:
   update-tinacms:
     runs-on: ubuntu-latest
@@ -14,7 +17,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 22.22.0
       # Install deps, update Tina packages, update schema
       - name: Install dependencies
         run: yarn install
